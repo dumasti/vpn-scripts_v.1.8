@@ -1,0 +1,15 @@
+инструкция для создания нового сервера vpn:
+1. Идем на сервер 10.20.33.2
+2. sudo -i
+3. cd /var/opt/celery/ca/newvpn/
+4. cp create-vpn_clear/* vpn...
+5. cd vpn...
+6. меняем имя фирмы в файле buildCA.sh
+7. chmod +x *.sh
+8. ./buildCA.sh
+9. ./vpn-server-add.sh
+
+На сервер будет отправлена вся структура. Надо зайти на сервер и переместить структуру в директорию /etc/openvpn/ после сделать исполняемыми файлы в /etc/openvpn/vpnNAME_SERVER/bin/, настроить shorewall и запустить сервер.
+
+10. ./vpn-client-add.sh
+
